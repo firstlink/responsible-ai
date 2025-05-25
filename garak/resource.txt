@@ -1,0 +1,13 @@
+https://github.com/NVIDIA/garak/blob/main/garak-paper.pdf
+https://docs.nvidia.com/nemo/guardrails/latest/evaluation/llm-vulnerability-scanning.html
+https://docs.garak.ai/garak
+https://embracethered.com/blog/posts/2023/data-exfiltration-in-azure-openai-playground-fixed/
+
+
+garak -listprobe
+garak --model_type openai --model_name gpt-4.0-turbo --probes xss.MarkdownImageExfil
+garak --model_type openai --model_name gpt-3.5-turbo --probes xss.MarkdownImageExfil
+garak --model_type huggingface --model_name gpt2 --probes xss.MarkdownImageExfil
+
+garak --model_type huggingface --model_name gpt2 --probes promptinject
+garak --model_type huggingface --model_name gpt2 --probes lmrc.Profanity

@@ -1,0 +1,11 @@
+---
+run:
+    generations: 1
+
+plugins:
+    probe_spec: xss.MarkdownImageExfil
+    model_type: huggingface
+    model_name: gpt2
+
+reporting:
+    report_dir: C:\\develop\\gen_ai\\libraries\\garak\\reports
